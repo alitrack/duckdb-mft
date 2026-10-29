@@ -1,0 +1,21 @@
+[package]
+name = "mft-core"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+license = "MIT"
+description = "Pure NTFS $MFT record-decode, path reconstruction, and timestomp heuristic engine (ported verbatim from Query-farm vgi-mft, no Arrow / no VGI deps)"
+
+[dependencies]
+mft = "0.7"
+jiff = "0.2"
+num-traits = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+log = "0.4"
+
+[features]
+synth = []
+
+[lints.rust]
+unsafe_code = "forbid"
